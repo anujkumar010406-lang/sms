@@ -1,0 +1,52 @@
+{% extends 'adminbase.html' %}
+{% load static %}
+{% block admin %}
+
+
+<div class="row">
+    <div class="col-sm-12">
+        <h1 class="text-center">View Teacher</h1>
+        <table class="table">
+            <tr>
+                <th>Name</th>
+                <th>Father Name</th>
+                <th>Mother Name</th>
+                <th>Gender</th>
+                <th>DOB </th>
+                <th>Contact NO </th>
+                <th>Email </th>
+                <th>Teacher Class</th>
+                <th>Address</th>
+                <th>Salary </th>
+                <th>Qualification </th>
+                <th>Password</th>
+                <th>Date</th>
+                <th>Action</th>
+            </tr>
+            {% for t in th %}
+            <tr>                
+                <td>{{t.name}}</td>
+                <td>{{t.fname}}</td>
+                <td>{{t.mname}}</td>
+                <td>{{t.gender}}</td>
+                <td>{{t.dob}}</td>
+                <td>{{t.contactno}}</td>
+                <td>{{t.emailaddress}}</td>
+                <td>{{t.tclass}}</td>
+                <td>{{t.address}}</td>
+                <td>{{t.salary}}</td>
+                <td>{{t.qualification}}</td>
+                <td>{{t.password}}</td>
+                <td>{{t.created_date}}</td>
+                <td>
+                    <a href="#" class="btn btn-danger">Delete</a>
+                    <a href="#" class="btn btn-success">Edit</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+</div>
+
+
+{%endblock%}

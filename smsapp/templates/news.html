@@ -1,0 +1,78 @@
+{% extends 'base.html' %}
+{% block body %}
+{% load static %}
+<div class="row py-2">
+    <div class="col-sm-12" style="background: url( ../static/images/Pradesh.jpg); width: 100%; height: 250px;">
+
+        <h1 class=" mt-5 text-light text-center">Event</h1>
+
+
+    </div>
+    <div class="row py-3 mt-5">
+        <div class="col-sm-12 shadow">
+
+
+            <div class="clearfix mt-5 ">
+                <img src="{% static 'images/academics_1.jpg' %}" class="col-md-6 float-md-end mb-3 ms-md-3" alt="...">
+
+                <p>
+                    A paragraph of placeholder text. We're using it here to show the use of the clearfix class. We're
+                    adding quite a few meaningless phrases here to demonstrate how the columns interact here with the
+                    floated image.
+                </p>
+
+                <p>
+                    As you can see the paragraphs gracefully wrap around the floated image. Now imagine how this would
+                    look with some actual content in here, rather than just this boring placeholder text that goes on
+                    and on, but actually conveys no tangible information at. It simply takes up space and should not
+                    really be read.
+                </p>
+
+                <p>
+                    The school applies the pedagogy of ‘Engaging the Learner’ and an ‘Interdisciplinary Approach’ to
+                    enhance the teaching/ learning experience of the youth. The idea is to move beyond lectures towards
+                    the application of engaging activities such as discussions, videos, quizzes, games, and varied
+                    online creative resources for enhancing the learning process. Technology is integrated into the
+                    teaching/learning process, with every classroom being IT-enabled. An interactive teaching
+                    methodology encourages students to be active learners and promotes conceptual understanding and
+                    reflective practices.
+
+                    In the attempt to provide holistic learning, the school facilitates sessions on Life Skills as well
+                    as Intrapersonal and Interpersonal Development. Life Skills are the skills that one needs to build a
+                    happy and successful life. These provide young adolescents with a set of tools, skills and winning
+                    attitudes which can help them to become all that they are capable of becoming. Special Value
+                    Education and Life Skill Sessions by trained counselors endow the students with value based
+                    learning.
+                </p>
+            </div>
+
+        </div>
+    </div>
+    <div class="row mt-5">
+        <div class="col-sm-4 mx-4 pt-3">
+            <h1>| Events |</h1>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-4 bg-dark">
+            <img src="{% static 'images/naini_academics_3.jpg' %}" alt="">
+        </div>
+        <div class="col-sm-4 bg-danger">
+            <img src="{% static 'images/academics_4.jpg' %}" alt="">
+        </div>
+        <div class="col-sm-4 bg-primary">
+            <img src="{% static 'images/academics_5.jpg' %}" alt="">
+        </div>
+    </div>
+
+
+
+
+
+
+
+    {% endblock %}
+    {% block title %}
+    Events
+    {% endblock %}

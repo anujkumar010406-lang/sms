@@ -1,0 +1,99 @@
+{% extends 'adminbase.html' %}
+{% load static %}
+{% block admin %}
+
+
+<div class="row">
+    <div class="col-sm-12">
+        <h1 class="text-center">Add Teacher</h1>
+        <form method="post">
+            <table class="table table-bordered">
+                {% csrf_token %}
+                <tr>
+                    <td>Enter Name</td>
+                    <td>
+                        <input type="text" name="name" class="form-control">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Father's Name</td>
+                    <td>
+                        <input type="text" name="fname" class="form-control">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Mother's Name</td>
+                    <td>
+                        <input type="text" name="mname" class="form-control">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Gender</td>
+                    <td>
+                        <input type="radio" name="gender" value="male" class="form-check-input">male
+                        <input type="radio" name="gender" value="female" class="form-check-input">female
+                    </td>
+                </tr>
+                <tr>
+                    <td>DOB</td>
+                    <td>
+                        <input type="text" name="dob" class="form-control">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Contact No</td>
+                    <td>
+                        <input type="text" name="contactno" class="form-control">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Email Address</td>
+                    <td>
+                        <input type="text" name="emailaddress" class="form-control">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Select Class</td>
+                    <td>
+                        <select name="tclass" class="form-control">
+                            <option value="">Select class of teacher</option>
+                            {% for c in cl %}
+                            <option value="{{c.class_name}}">{{c.class_name}}</option>
+                            {% endfor %}
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Address</td>
+                    <td>
+                        <input type="text" name="address" class="form-control">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Salary</td>
+                    <td>
+                        <input type="number" name="salary" class="form-control">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Select Qualification</td>
+                    <td>
+                        <input type="text" name="qualification" class="form-control">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="text-center">
+                        <button type="Submit" class=" btn btn-success px-5">Add</button>
+                    </td>
+                </tr>
+
+
+            </table>
+
+        </form>
+    </div>
+</div>
+
+
+
+{%endblock%}

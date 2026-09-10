@@ -1,0 +1,74 @@
+{% extends 'teacherbase.html' %}
+{% load static %}
+
+
+{% block teacher %}
+<div class="row">
+    <div class="col-sm-12">
+        <h1 class="text-center">Teacher profile</h1>
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+
+            <div class="row">
+                <div class="col-sm-2 mx-auto">
+                    {% if teacher.pic %}
+                    <img src="{{teacher.pic.url}}" alt="" class="img-fluid border-" height="200px" width="250px">
+                    {% endif %}
+                    <input type="file" name="pic">
+                </div>
+            </div>
+
+
+
+            <div class="row">
+                <div class="col-sm-6">
+                    <label for="n">Name</label>
+                    <input type="text" name="name" value="{{teacher.name}}" id="n" class="form-control rounded-0" >
+                </div>
+            </div>
+                <div class="col-sm-6 mt-3">
+                    <label for="fn" class="form-label">Father Name</label>
+                    <input type="text" name="fname" value="{{teacher.fname}}" id="n" class="form-control rounded-0" >
+                </div>
+                </div> 
+                <div class="col-sm-6 mt-3">
+                    <label for="fn" class="form-label">Mother Name</label>
+                    <input type="text" name="mname" value="{{teacher.mname}}" id="n" class="form-control rounded-0" >
+                </div>  
+            </div>
+            <div class="col-sm-6 mt-3">
+                <label for="fn" class="form-label">Gender</label>
+                <input type="text" name="gender" value="{{teacher.gender}}" id="n" class="form-control rounded-0" >
+            </div>
+            <div class="col-sm-6 mt-3">
+                <label for="fn" class="form-label">DOB</label>
+                <input type="text" name="dob" value="{{teacher.dob}}" id="n" class="form-control rounded-0" >
+            </div> 
+            <div class="col-sm-6 mt-3">
+                <label for="fn" class="form-label">Teacher Class</label>
+                <input type="text" name="tclass" value="{{teacher.tclass}}" id="n" class="form-control rounded-0" >
+            </div>
+            <div class="col-sm-6 mt-3">
+                <label for="ad" class="form-label">Address</label>
+                <input type="text" name="address" value="{{teacher.address}}" id="n" class="form-control rounded-0" >
+            </div>
+            <div class="col-sm-6 mt-3">
+                <label for="fn" class="form-label">Salary</label>
+                <input type="text" name="salary" value="{{teacher.salary}}" id="n" class="form-control rounded-0" >
+            </div>
+            <div class="col-sm-6 mt-3">
+                <label for="fn" class="form-label">contactno</label>
+                <input type="text" name="contactno" value="{{teacher.contactno}}" id="c" class="form-control rounded-0" >
+            </div>
+            <div class="col-sm-6 mt-3">
+                <label for="fn" class="form-label">Qualification</label>
+                <input type="text" name="qualification" value="{{teacher.qualification}}" id="n" class="form-control rounded-0" >
+            </div>
+            <div class="text-start">
+                <button class="btn btn-success">Update</button>
+            </div>
+
+        </form>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,37 @@
+{% extends 'adminbase.html' %}
+{% load static %}
+{% block admin %}
+
+
+<div class="row">
+    <div class="col-sm-12">
+        <h1 class="text-center">view subject</h1>
+        <table class="table">
+            <tr>
+                <th>Subject Name</th>
+                <th>Select Class</th>
+                <th>Book Name</th>
+                <th>S Teacher </th>
+                <th>Added Date</th>
+                <th>Action</th>
+            </tr>
+            {% for s in sb %}
+            <tr>                
+                <td>{{s.subject_name}}</td>
+                <td>{{s.sclass}}</td>
+                <td>{{s.book}}</td>
+                <td>{{s.steacher}}</td>
+                <td>{{s.created_date}}</td>
+                <td>
+                    <a href="#" class="btn btn-danger">Delete</a>
+                    <a href="#" class="btn btn-success">Edit</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+</div>
+
+
+
+{%endblock%}

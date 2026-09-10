@@ -1,0 +1,28 @@
+{% extends 'studentbase.html' %}
+{% load static %}
+
+
+{% block student %}
+<div class="row">
+    <div class="col-sm-12">
+        <h1 class="text-center">View SLM</h1>
+        <table class="table w-75 mx-auto text-center">
+            <tr>
+                <th>S. No</th>
+                <th>Title</th>
+                <th>Action</th>
+            </tr>
+            {% for s in slm %}
+            <tr>
+                <td>{{forloop.counter}}</td>
+                <td>{{s.title}}</td>
+                <td>
+                    <a href="{{s.sm.url}}" class=" btn btn-warning" target="_blank">View</a>
+                    <a href="{{s.sm.url}}" download class=" btn btn-warning">Download</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+</div>
+{% endblock %}
